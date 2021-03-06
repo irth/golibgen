@@ -74,7 +74,6 @@ func (l FictionSearchProvider) Find(query string) ([]Book, error) {
 				book.series = content
 			case 2: // Title:
 				book.title = content
-				fmt.Println(content)
 			case 3:
 				book.language = content
 			case 4:
