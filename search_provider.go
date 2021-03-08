@@ -8,5 +8,7 @@ type Book interface {
 	Title() string
 	Author() string
 	Format() string
+	Size() string
+	Language() string
 	DownloadLink() (string, error)
 }

@@ -23,9 +23,11 @@ type LibgenBook struct {
 	mirrors   []string
 }
 
-func (b LibgenBook) Title() string  { return b.title }
-func (b LibgenBook) Author() string { return strings.Join(b.authors, ", ") }
-func (b LibgenBook) Format() string { return b.extension }
+func (b LibgenBook) Title() string    { return b.title }
+func (b LibgenBook) Author() string   { return strings.Join(b.authors, ", ") }
+func (b LibgenBook) Format() string   { return b.extension }
+func (b LibgenBook) Size() string     { return b.size }
+func (b LibgenBook) Language() string { return b.language }
 
 func (b LibgenBook) findSupportedMirror() (*url.URL, error) {
 	for _, mirror := range b.mirrors {

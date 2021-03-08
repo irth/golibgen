@@ -19,9 +19,11 @@ type FictionBook struct {
 	mirrors   []string
 }
 
-func (b FictionBook) Title() string  { return b.title }
-func (b FictionBook) Author() string { return strings.Join(b.authors, ", ") }
-func (b FictionBook) Format() string { return b.extension }
+func (b FictionBook) Title() string    { return b.title }
+func (b FictionBook) Author() string   { return strings.Join(b.authors, ", ") }
+func (b FictionBook) Format() string   { return b.extension }
+func (b FictionBook) Size() string     { return b.size }
+func (b FictionBook) Language() string { return b.language }
 
 func (b FictionBook) DownloadLink() (string, error) {
 	return getDownloadLink(b.mirrors)
